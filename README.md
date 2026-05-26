@@ -11,6 +11,7 @@ Upload a sketch and get feedback on:
 - **Technical issues** — proportion problems, shading errors, perspective mistakes, with severity ratings
 - **Enhancement suggestions** — ways to make the piece more compelling beyond fixing mistakes (storytelling, lighting, appeal, composition)
 - **General tips** — skill-level-aware advice based on what the model observes
+- **Real Knowledge** — every critique is backed by a curated knowledge base of actual art principles (contributions and error-checking very much welcome!)
 
 DISCLAIMER: Ultimately, this is still a piece of code. It is not human, and may fail to recognize stylistic choices, the emotion of your piece, and similar things that an actual artist could spot instantly.
             Please take critiques and advice with a grain of salt, and ask for help from actual artists when you have the opportunity to!
@@ -35,6 +36,7 @@ AI (and technology as a whole) should be about improving a person's ability to d
 ```
 rag-art-crit
 ├── art_analysis.py  
+├── retrieval.py  
 ├── knowledge_base/      
 │   ├── whole bunch of markdown files for RAG
 │   └── ...
@@ -49,6 +51,8 @@ rag-art-crit
 For non-coders: I'm sorry, but you'll need to get your hands dirty and get a terminal for now :(  You can find tutorials by googling. Once you get that set up you can pretty much just copy paste the code.
     (I'll work on a easier to use web UI when I get time)
  
+ COST: ~$0.02-$0.03 per run for simple sketches, although costs go up by a few cents as your art gets more and more complicated and colourful and thus take up more tokens. 
+
 **1. Clone and create a virtual environment**
  
 ```bash
@@ -74,8 +78,11 @@ Add to `.bashrc` or `.zshenv` to persist across sessions.
 
 (You can sign up for a key at console.anthropic.com)
 
-(Cost is about $0.01 - $0.02 per image analysis)
-
+**4. Setup your Embeddings**
+ 
+```bash
+python retrieval.py
+```
 ---
  
 ## Usage
