@@ -121,7 +121,7 @@ Write encouraging but honest feedback that:
 - Explains WHY each problem occurs, not just that it exists
 - Gives one concrete exercise or fix per issue
 - Suggests specific search terms or resources where relevant
-- Ends with an overall encouraging note based on their apparent skill level
+- Focuses on clarity and remains concise and specific.
 
 Write in plain conversational language as a teacher would. Do not use JSON. 
 Do not number every point rigidly — write it as natural flowing feedback."""
